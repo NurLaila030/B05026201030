@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #b3b3ff;
+  border: solid 1px #00004d;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+body{
+    background-image: url(gambar/bg\ HBD.png);
+    color: #000f1a;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+main{
+    overflow: auto;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    padding-left:  20px;
+    padding-right: 20px;
+}
+</style>
+</head>
+<body>
+<main>
+<div id="flip">Click Me!</div>
+<div id="panel">
+    <img src="gambar/HBD.jpg" width="500" height="400" alt="slideToggle"/>
+    <h1>Surprise!</h1>
+    <h2>Hello, Anna! Happy Birthday to you!</h2>
+</div>
+</main>
+</body>
+</html>

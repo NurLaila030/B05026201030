@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            h2{
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 1px 1px 2px #1a1a1a;
+                font-size: 35px;
+            }
+            body{
+                background-image: url(gambar/backgroundAnime2.jpeg);
+                height: 90%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+</html>
+<body>
+    <div class="container">
+        <h2>Rekomendasi Film</h2>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Anime</button>
+          <button type="button" class="btn btn-primary">Variety Show</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Film
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Indonesia</a>
+              <a class="dropdown-item" href="#">Barat</a>
+              <a class="dropdown-item" href="#">China</a>
+              <a class="dropdown-item" href="#">Korea</a>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Drama
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Indonesia</a>
+              <a class="dropdown-item" href="#">Thailand</a>
+              <a class="dropdown-item" href="#">China</a>
+              <a class="dropdown-item" href="#">Korea</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
