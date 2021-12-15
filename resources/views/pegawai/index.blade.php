@@ -1,41 +1,45 @@
-<!DOCTYPE html>
-<html>
+@extends('layout.ceria')
+
+@section('isikonten')
+@section('title', 'Data Pegawai')
+@section('judulhalaman', 'DATA PEGAWAI')
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+
 </head>
 <body>
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
-
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+	<a href="/pegawai/tambah"class="btn btn-primary" role:"button"> + Tambah Pegawai Baru</a>
 
 	<br/>
 	<br/>
-
-	<table border="1">
-		<tr>
+<div class="container" align="center">
+    <p>Cari Data Pegawai berdasarkan Nama:</p>
+    <form action="/pegawai/cari" method="GET">
+		<input class="form-control" type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+		<input class="form-control btn-success" type="submit" value="CARI">
+	</form>
+	<table class="table table-striped">
+		<tr class="table-info">
 			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
 			<th>Alamat</th>
 			<th>Opsi</th>
 		</tr>
 		@foreach($pegawai as $p)
 		<tr>
+            <td>{{ $loop->iteration }}</td>
 			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+                <a href="/pegawai/detail/{{ $p->pegawai_id }}" class="btn btn-default btn-sm" role="button">View Detail</a>
+				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+				<a href="/pegawai/hapus/{{ $p->pegawai_id }}"class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
 
+    {{ $pegawai->links() }}
 
 </body>
-</html>
+@endsection

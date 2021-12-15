@@ -1,10 +1,13 @@
 @extends('layout.ceria')
 
-@section('isikonten')
-@section('title', 'Data Pegawai')
-@section('judulhalaman', 'DATA PEGAWAI')
-<head>
+@section('title', 'ABSEN MUTASI')
 
+@section('isikonten')
+
+@section('judulhalaman', 'EDIT MUTASI')
+
+<head>
+	<title>DATA MUTASI</title>
     <style>
         form {
             padding-bottom: 16px;
@@ -41,35 +44,32 @@
 </head>
 <body>
 
-
-	<a href="/pegawai"> Kembali</a>
+	<a href="/mutasi"> Kembali</a>
 
 	<br/>
 	<br/>
 
-	<form action="/pegawai/store" method="post">
-		{{ csrf_field() }}
-        <br/>
+	@foreach($mutasi as $m)
         <div class="form-group">
-            <label for="nama">Nama:</label>
-            <input type="text" name="nama" required="required">
+            <label for="ID Pegawai"class="control-label">ID Pegawai:</label>
+            <label class="control-label">{{ $m->IDPegawai }}</label>
         </div>
         <div class="form-group">
-            <label for="jabatan">Jabatan:</label>
-            <input type="text" name="jabatan" required="required">
+            <label for="Departemen"class="control-label">Departemen:</label>
+            <label class="control-label">{{ $m->Departemen }}</label>
         </div>
         <div class="form-group">
-            <label for="umur">Umur:</label>
-            <input type="number" name="umur" required="required">
+            <label for="Sub Departemen"class="control-label">Sub Departemen:</label>
+            <label class="control-label">{{ $m->SubDepartemen }}</label>
         </div>
         <div class="form-group">
-            <label for="alamat">Alamat:</label>
-            <textarea name="alamat" required="required"></textarea>
+            <label for="Mulai Bertugas"class="control-label">Mulai Bertugas:</label>
+            <label class="control-label">{{ $m->MulaiBertugas }}</label>
         </div>
-
-		<button type="submit" class=" btn-primary">Simpan Data</button>
 
 	</form>
+	@endforeach
+
 
 </body>
 @endsection

@@ -33,6 +33,8 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 
 Route::get('/mutasi','MutasiController@index');
 Route::get('/mutasi/tambah','MutasiController@tambah');
@@ -40,10 +42,21 @@ Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
 Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
+Route::get('/mutasi/cari','MutasiController@cari');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 
-Route::get('/mutasi1','Mutasi1Controller@index');
-Route::get('/mutasi1/tambah','Mutasi1Controller@tambah');
-Route::post('/mutasi1/store','Mutasi1Controller@store');
-Route::get('/mutasi1/edit/{id}','Mutasi1Controller@edit');
-Route::post('/mutasi1/update','Mutasi1Controller@update');
-Route::get('/mutasi1/hapus/{id}','Mutasi1Controller@hapus');
+Route::get('/absen','AbsenController@index');
+Route::get('/absen/tambah','AbsenController@tambah');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{id}','AbsenController@edit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+Route::get('/masker','MaskerController@index');
+Route::get('/masker/tambah','MaskerController@tambah');
+Route::post('/masker/store','MaskerController@store');
+Route::get('/masker/edit/{kodemasker}','MaskerController@edit');
+Route::post('/masker/update','MaskerController@update');
+Route::get('/masker/hapus/{kodemasker}','MaskerController@hapus');
+Route::get('/masker/cari','MaskerController@cari');
+Route::get('/masker/detail/{kodemasker}','MaskerController@view');
