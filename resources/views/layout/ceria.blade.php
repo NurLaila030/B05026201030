@@ -158,6 +158,10 @@
                 <a href="/masker">Praktikum</a>
             </li>
             <hr>
+            <li>
+                <a href="/karyawan1">UAS</a>
+            </li>
+            <hr>
           </ul>
 
         </div>
